@@ -124,7 +124,7 @@ With No VPC support, we could debug the scripts more flexible.
 
 **2. Run Test (python 2.7 as reference)**
 
-- **Run Test (use default browser - Chrome) **
+- **Run Test (use default browser - Chrome)**
 
     ```
     docker run \
