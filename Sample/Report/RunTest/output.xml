@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.3 (Python 3.6.4 on linux)" generated="20180422 15:31:59.997">
+<suite id="s1" name="Sample 1" source="/tmp/Sample/sample_1.robot">
+<test id="s1-t1" name="Sample Case">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${RF_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ff_profile_dir=${FF_PROFILE}</arg>
+</arguments>
+<msg timestamp="20180422 15:32:00.159" level="INFO">Opening browser 'Chrome' to base url 'http://robotframework.org/'.</msg>
+<status status="PASS" starttime="20180422 15:32:00.158" endtime="20180422 15:32:10.681"></status>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is enabled.</doc>
+<arguments>
+<arg>css:a[href="#libraries"]</arg>
+</arguments>
+<status status="PASS" starttime="20180422 15:32:10.694" endtime="20180422 15:32:10.768"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>css:a[href="#libraries"]</arg>
+</arguments>
+<msg timestamp="20180422 15:32:10.769" level="INFO">Clicking element 'css:a[href="#libraries"]'.</msg>
+<status status="PASS" starttime="20180422 15:32:10.768" endtime="20180422 15:32:10.963"></status>
+</kw>
+<status status="PASS" starttime="20180422 15:32:00.158" endtime="20180422 15:32:10.964" critical="yes"></status>
+</test>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20180422 15:32:10.967" endtime="20180422 15:32:11.497"></status>
+</kw>
+<doc>Sample Case From https://github.com/Kenith/robotframework-docker</doc>
+<status status="PASS" starttime="20180422 15:32:00.003" endtime="20180422 15:32:11.497"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Sample 1">Sample 1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

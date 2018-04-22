@@ -1,0 +1,16 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Sample 2 :: Sample Case From https://github.com/Kenith/robotframewor...
+==============================================================================
+Sample Case                                                           | PASS |
+------------------------------------------------------------------------------
+Suites.Sample 2 :: Sample Case From https://github.com/Kenith/robo... | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
+==============================================================================
+Output:  /tmp/Sample/Report/RunCrossBrowserTest/pabot_results/1/Suites.Sample 2/output.xml

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180422 15:53:14.367" generator="Robot 3.0.3 (Python 2.7.5 on linux2)">
+<suite id="s1" name="Suites">
+<suite source="/tmp/Sample/sample_1.robot" id="s1-s1" name="Sample 1">
+<test id="s1-s1-t1" name="Sample Case">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20180422 15:53:14.473" starttime="20180422 15:53:14.473"></status>
+</kw>
+<status status="PASS" endtime="20180422 15:53:14.473" critical="yes" starttime="20180422 15:53:14.472"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT_RUN" endtime="20180422 15:53:14.474" starttime="20180422 15:53:14.473"></status>
+</kw>
+<doc>Sample Case From https://github.com/Kenith/robotframework-docker</doc>
+<status status="PASS" endtime="20180422 15:53:14.474" starttime="20180422 15:53:14.393"></status>
+</suite>
+<suite source="/tmp/Sample/sample_2.robot" id="s1-s2" name="Sample 2">
+<test id="s1-s2-t1" name="Sample Case">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="NOT_RUN" endtime="20180422 15:53:14.480" starttime="20180422 15:53:14.480"></status>
+</kw>
+<status status="PASS" endtime="20180422 15:53:14.480" critical="yes" starttime="20180422 15:53:14.479"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT_RUN" endtime="20180422 15:53:14.481" starttime="20180422 15:53:14.481"></status>
+</kw>
+<doc>Sample Case From https://github.com/Kenith/robotframework-docker</doc>
+<status status="PASS" endtime="20180422 15:53:14.481" starttime="20180422 15:53:14.474"></status>
+</suite>
+<status status="PASS" endtime="20180422 15:53:14.482" starttime="20180422 15:53:14.372"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Suites" pass="2">Suites</stat>
+<stat fail="0" id="s1-s1" name="Sample 1" pass="1">Suites.Sample 1</stat>
+<stat fail="0" id="s1-s2" name="Sample 2" pass="1">Suites.Sample 2</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180422 15:53:14.341" level="ERROR">Error in file '/tmp/Sample/sample_1.robot': Non-existing setting ''.</msg>
+<msg timestamp="20180422 15:53:14.346" level="ERROR">Error in file '/tmp/Sample/sample_2.robot': Non-existing setting ''.</msg>
+<msg timestamp="20180422 15:53:14.394" level="ERROR">Error in file '/tmp/Sample/sample_1.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+<msg timestamp="20180422 15:53:14.475" level="ERROR">Error in file '/tmp/Sample/sample_2.robot': Setting variable '' failed: Invalid variable name ''.</msg>
+</errors>
+</robot>
