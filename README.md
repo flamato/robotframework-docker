@@ -2,7 +2,7 @@
 
 > Why choose the docker [kenith/robotframework-docker](https://hub.docker.com/r/kenith/robotframework-docker/) for Robot Framework: 
 > 1. With no VNC supports, we could debug our script easier and more flexible if any error occurs during the test
-![alt text](https://raw.githubusercontent.com/kenith/robotframework-docker/dev/noVPC_Sample.png)
+![alt text](https://raw.githubusercontent.com/Kenith/robotframework-docker/dev/noVPC_Sample.png)
 > 2. Support Python 2.7, and Python 3.6 for Robot Framework, such as robot, robot2, robot3
 > 3. Installed browsers, such as Chrome, Firefox, PhantomJS for testing
 > 4. We are working on a FREE workshop for Robot Framework
@@ -78,7 +78,7 @@ With No VPC support, we could debug the scripts more flexible.
    ```
    
 **2. Access the [http://localhost:6901/?password=vncpassword/](http://localhost:6901/?password=vncpassword/) to the noVNC Env**
-![alt text](https://raw.githubusercontent.com/kenith/robotframework-docker/dev/noVPC_Sample.png)
+![alt text](https://raw.githubusercontent.com/Kenith/robotframework-docker/dev/noVPC_Sample.png)
 
 **3. Open terminal and cd to your folder: cd /tmp**
 
