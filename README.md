@@ -12,6 +12,7 @@
 - [Supports](#supports)
 - [User Docker Step by Step](#use-docker-step-by-step)
 - [Use Docker Directly](#use-docker-directly)
+- [Proxy](#proxy)
 - [Useful Links](#useful-links)
 
 ## Build
@@ -165,7 +166,51 @@ With No VPC support, we could debug the scripts more flexible.
         pabot --argumentfile1 firefox.args --argumentfile2 chrome.args --processes 4 --outputdir Report/RunCrossBrowserTest *.robot
     ```
 
+## Proxy
+**1. Chrome/Firefox/IE/Safari: Use desired_capabilities to pass proxy**
+
+``` 
+${proxy}=  Evaluate  {'proxy': {'proxyType': 'manual', 'httpProxy': '172.17.0.1:3128', 'sslProxy': '172.17.0.1:3128'}}
+open browser  http://robotframework.org/  Chrome  desired_capabilities=${proxy}
+```
+  
+**2. Chrome: Alternatively, use keyword: Open Chrome With Proxy**
+
+``` 
+Open Chrome With Proxy
+    [arguments]  ${url}
+    ${chrome_proxy}=  Evaluate  "--proxy-server=172.17.0.1:3128"
+    ${options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+    Call Method  ${options}  add_argument  ${chrome_proxy}
+    Create WebDriver  Chrome  chrome_options=${options}
+    go to  ${url}
+```
+  
+**3. Firefox: Alternatively, use firefox profile: /headless/ta.default**
+
+``` 
+# Please update the proxy in /headless/ta.default/prefs.js accordingly
+open browser  http://robotframework.org/  Firefox  ff_profile_dir=/headless/ta.default
+```
+   
+> Note: You could use sed to update, for example, 172.17.0.1 to 127.0.0.1
+
+`sed -i 's/172.17.0.1/127.0.0.1/g' /headless/ta.default/prefs.js`
+  
+**4. PhantomJS: Selenium support is deprecated. To pass proxy, use keyword: Open PhantomJS With Proxy**
+
+``` 
+Open PhantomJS With Proxy
+    [arguments]  ${url}
+    ${service_args}=  Evaluate  ["--proxy=172.17.0.1:3128", "--ignore-ssl-errors=yes"]
+    Create WebDriver  PhantomJS  service_args=${service_args}
+    go to  ${url}
+```
+
 ## Useful Links
 1. [Robot Build In Library](http://robotframework.org/robotframework/#standard-libraries)
 2. [Selenium Library](http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
 3. [All Possible Library](http://robotframework.org/robotframework/#standard-libraries)
+4. [GeckoDriver](https://github.com/mozilla/geckodriver/releases)
+5. [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
+6. [PhantomJS](http://phantomjs.org/download.html)

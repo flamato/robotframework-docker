@@ -91,9 +91,16 @@ RUN curl -Lk https://bootstrap.pypa.io/get-pip.py | python - \
     && cp /usr/bin/rebot /usr/bin/rebot2 \
     && cp /usr/bin/pabot /usr/bin/pabot2
 
+RUN echo "Installing Java..." \
+    && yum install -y java
+
 # Delete the cahce
 RUN rm -rf /headless/.cache
 
 # Change user from root -> ${user}
 USER ${USER}
 RUN id
+
+RUN echo "Create Firefox profile" \
+    mkdir -p /headless/ta.default/
+COPY --chown=10000:10000 prefs.js /headless/ta.default/
