@@ -162,7 +162,7 @@ For more info about DooD, we **HIGHLY** suggest to read [the blog](https://conta
        
      ```
      set +x
-     docker pull kenith/robotframework-docker:latest
+     docker pull kenith/robotframework:latest
      docker run \
          --workdir ${WORKSPACE} \
          --volumes-from jenkins_agent_1 \
@@ -171,7 +171,7 @@ For more info about DooD, we **HIGHLY** suggest to read [the blog](https://conta
          -p 5901:5901 \
          --shm-size 2048m \
          --name robot-framework \
-         kenith/robotframework-docker \
+         kenith/robotframework:latest \
          /bin/bash -c "cd Sample; robot --outputdir Reports/CI sample_1.robot"
      ```
    - Post-build Actions: 
