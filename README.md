@@ -1,6 +1,6 @@
 # Robot Framework Docker Support
 
-> Why choose the docker [kenith/robotframework-docker](https://hub.docker.com/r/kenith/robotframework-docker/) for Robot Framework: 
+> Why choose the docker [kenith/robotframework](https://hub.docker.com/r/kenith/robotframework/) for Robot Framework: 
 > 1. With no VNC supports, we could debug our script easier and more flexible if any test failure occurs during the CI/CD
 ![Screenshot](noVPC_Sample.png)
 > 2. Support Python 2.7, and Python 3.6 for Robot Framework, such as robot, robot2, robot3
@@ -17,10 +17,10 @@
 - [Useful Links](#useful-links)
 
 ## Build
-Get the source and sample from git hub [kenith/robotframework-docker](https://github.com/Kenith/robotframework-docker), and build image: `docker build -t robotframework-docker .`
+Get the source and sample from git hub [kenith/robotframework-docker](https://github.com/Kenith/robotframework-docker), and build image: `docker build -t robotframework .`
 > Note: In Dockerfile, you could set certain certain Chrome/ChromeDriver/Firefox/Geckodriver version
 
-Or, pull the image from docker hub - [kenith/robotframework-docker](https://hub.docker.com/r/kenith/robotframework-docker/): `docker pull kenith/robotframework-docker:latest`
+Or, pull the image from docker hub - [kenith/robotframework](https://hub.docker.com/r/kenith/robotframework/): `docker pull kenith/robotframework`
 
 ## Supports
 Support the Robot Framework based on Python2.7 & Python 3.6.
@@ -80,12 +80,12 @@ With No VPC support, we could debug the scripts more flexible.
         -p 5901:5901 \
         --shm-size 2048m \
         -d \
-        kenith/robotframework-docker:latest
+        kenith/robotframework:latest
    ```
    
    
 **2. Access the [http://localhost:6901/?password=vncpassword/](http://localhost:6901/?password=vncpassword/) to the noVNC Env**
-![alt text](https://raw.githubusercontent.com/Kenith/robotframework-docker/dev/noVPC_Sample.png)
+![Screenshot](noVPC_Sample.png)
 
 **3. Open terminal and cd to your folder: cd /tmp/Sample**
 
@@ -137,7 +137,7 @@ With No VPC support, we could debug the scripts more flexible.
         -p 6901:6901 \
         -p 5901:5901 \
         --shm-size 2048m \
-        kenith/robotframework-docker:latest \
+        kenith/robotframework:latest \
         /bin/bash -c "cd Sample; robot --outputdir Reports/RunTest sample_1.robot"
     ```
     
@@ -151,7 +151,7 @@ With No VPC support, we could debug the scripts more flexible.
         -p 6901:6901 \
         -p 5901:5901 \
         --shm-size 2048m \
-        kenith/robotframework-docker:latest \
+        kenith/robotframework:latest \
         /bin/bash -c "cd Sample; pabot --processes 2 --outputdir Reports/RunParallelTest --variable BROWSER:Firefox *.robot"
     ```
 
@@ -165,7 +165,7 @@ With No VPC support, we could debug the scripts more flexible.
         -p 6901:6901 \
         -p 5901:5901 \
         --shm-size 2048m \
-        kenith/robotframework-docker:latest \
+        kenith/robotframework:latest \
         /bin/bash -c "cd Sample; pabot --argumentfile1 firefox.args --argumentfile2 chrome.args --processes 4 --outputdir Reports/RunCrossBrowserTest *.robot"
     ```
 
