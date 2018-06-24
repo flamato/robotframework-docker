@@ -18,6 +18,7 @@
 
 ## Build
 Get the source and sample from git hub [kenith/robotframework-docker](https://github.com/Kenith/robotframework-docker), and build image: `docker build -t robotframework-docker .`
+> Note: In Dockerfile, you could set certain certain Chrome/ChromeDriver/Firefox/Geckodriver version
 
 Or, pull the image from docker hub - [kenith/robotframework-docker](https://hub.docker.com/r/kenith/robotframework-docker/): `docker pull kenith/robotframework-docker:latest`
 
